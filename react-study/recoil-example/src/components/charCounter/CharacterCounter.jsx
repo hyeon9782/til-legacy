@@ -1,7 +1,6 @@
 import { useRecoilState, useRecoilValue } from "recoil";
-import { charCountState } from "../atom/charCountState";
-import { textState } from "../atom/textState";
-
+import {charCountState}  from "../../states/charCounter/charCountState";
+import {textState} from "../../states/charCounter/textState";
 
 const CharacterCounter = () => {
   return (

@@ -1,10 +1,14 @@
+import { Suspense } from 'react';
 import './App.css';
-import TodoList from './components/TodoList';
+import TodoList from './components/todoList/TodoList'
+import { Loading } from './components/dogImage/Loading';
 
 function App() {
   return (
     <div className="App">      
-        <TodoList />
+        <Suspense fallback={<Loading />}>
+          <TodoList />
+        </Suspense>
     </div>
   );
 }

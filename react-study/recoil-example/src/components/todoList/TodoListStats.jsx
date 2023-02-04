@@ -1,5 +1,5 @@
 import { useRecoilValue } from "recoil";
-import { todoListStatsState } from "../atom/todoListStatsState";
+import { todoListStatsState } from "../../states/todoList/todoListStatsState";
 
 const TodoListStats = () => {
     const {

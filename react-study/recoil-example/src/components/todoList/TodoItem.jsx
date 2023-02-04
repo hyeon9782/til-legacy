@@ -1,7 +1,8 @@
 import { useRecoilState } from "recoil";
+import { todoListState } from "../../states/todoList/todoListState";
 
 const TodoItem = ({item}) => {
-    const [todoList, setTodoList] = useRecoilState();
+    const [todoList, setTodoList] = useRecoilState(todoListState);
     const index = todoList.findIndex((listItem) => listItem === item);
     
     const editItemText = ({target: {value}}) => {
