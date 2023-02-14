@@ -1,4 +1,4 @@
-export const API_END_POINT = 'http://localhost:4000';
+export const API_END_POINT = 'http://localhost:5000';
 
 const request = async (url) => {
     const res = await fetch(url)
