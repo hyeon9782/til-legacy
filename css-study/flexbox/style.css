@@ -1,0 +1,30 @@
+.container {
+    background: beige;
+    height: 100vh;
+    display: flex;
+}
+
+.item {
+    width: 40px;
+    height: 40px;
+}
+
+.item1 {
+    background: red;
+}
+
+.item2 {
+    background: purple;
+}
+
+.item3 {
+    background: blue;
+}
+
+.item4 {
+    background: pink;
+}
+
+.item5 {
+    background: lightgray;
+}

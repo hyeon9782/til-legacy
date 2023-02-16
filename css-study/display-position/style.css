@@ -1,0 +1,20 @@
+div, span {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+
+div {
+    background: red;
+    position: static;
+}
+
+span {
+    background: blue;
+}
+
+.test{
+    top: 100px;
+    left: 100px;
+    position: sticky;
+}
