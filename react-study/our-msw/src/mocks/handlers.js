@@ -1,4 +1,4 @@
-import { rest } from 'msw';
+import { rest } from "msw";
 
 const todos = ["먹기", "자기", "놀기"];
 
@@ -17,7 +17,7 @@ export const handlers = [
   // 할일 수정
   rest.put("/todos", (req, res, ctx) => {
     const id = req.params.id;
-    const newTodo = todos.filter(todo => todo)
+    const newTodo = todos.filter((todo) => todo);
     return res(ctx.status(201));
   }),
 
@@ -25,5 +25,5 @@ export const handlers = [
   rest.delete("/todos", (req, res, ctx) => {
     todos = [];
     return res(ctx.status(201));
-  })
+  }),
 ];
