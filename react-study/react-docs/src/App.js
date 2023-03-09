@@ -1,4 +1,4 @@
-import Game from "./components/Game";
+import Game from "./components/tic-tac-toe/Game";
 
 function App() {
   return (
