@@ -1,3 +1,5 @@
+import Gallery from "./components/gallery/Gallery";
+import { Modal } from "./components/modal/Modal";
 import FilterableProductTable from "./components/product-table/FilterableProductTable";
 
 function App() {
@@ -11,7 +13,8 @@ function App() {
   ];
   return (
     <div className="App">
-      <FilterableProductTable products={PRODUCTS} />
+      {/* <FilterableProductTable products={PRODUCTS} /> */}
+      <Modal.Header />
     </div>
   );
 }
