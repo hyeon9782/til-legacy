@@ -7,15 +7,18 @@ export default function PackingList() {
       <ul>
         <Item 
           isPacked={true} 
-          name="Space suit" 
+          name="Space suit"
+          importance={9} 
         />
         <Item 
           isPacked={true} 
           name="Helmet with a golden leaf" 
+          importance={0}
         />
         <Item 
           isPacked={false} 
           name="Photo of Tam" 
+          importance={6}
         />
       </ul>
     </section>

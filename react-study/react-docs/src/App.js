@@ -1,4 +1,9 @@
-import FilterableProductTable from "./components/product-table/FilterableProductTable";
+import List from "./components/1. Describing the UI/1-7 lists-rendering/List";
+import Poem from "./components/1. Describing the UI/1-7 lists-rendering/Poem";
+import RecipeList from "./components/1. Describing the UI/1-7 lists-rendering/RecipeList";
+import BrokenClock from "./components/1. Describing the UI/1-8 keeping-components-pure/BrokenClock"
+import TeaGathering from "./components/1. Describing the UI/1-8 keeping-components-pure/TeaGathering";
+
 
 function App() {
   const PRODUCTS = [
@@ -11,7 +16,7 @@ function App() {
   ];
   return (
     <div className="App">
-      {/* <FilterableProductTable products={PRODUCTS} /> */}
+      <BrokenClock />
     </div>
   );
 }
