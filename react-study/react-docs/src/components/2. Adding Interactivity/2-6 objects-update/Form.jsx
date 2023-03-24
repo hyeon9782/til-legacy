@@ -22,6 +22,13 @@ export default function Form() {
     });
   }
 
+  // Object.assign을 사용할 수도 있다. 
+  function handleChange1(e) {
+    setPerson(Object.assign({...person}, {
+      [e.target.name]: e.target.value
+    }));
+  }
+
   // 중첩된 객체 업데이트하기
   function handleTitleChange(e) {
     setPerson({
@@ -82,6 +89,7 @@ export default function Form() {
         First name:
         <input
           value={person.firstName}
+          name="firstName"
           onChange={handleChange}
         />
       </label>
@@ -89,6 +97,7 @@ export default function Form() {
         Last name:
         <input
           value={person.lastName}
+          name="lastName"
           onChange={handleChange}
         />
       </label>
@@ -96,12 +105,14 @@ export default function Form() {
         Email:
         <input
           value={person.email}
+          name="email"
           onChange={handleChange}
         />
       </label>
       <label>
         Title:
         <input
+          name="title"
           value={person.artwork.title}
           onChange={handleTitleChange}
         />
@@ -109,6 +120,7 @@ export default function Form() {
       <label>
         City:
         <input
+          name="city"
           value={person.artwork.city}
           onChange={handleCityChange}
         />
@@ -116,6 +128,7 @@ export default function Form() {
       <label>
         Image:
         <input
+          name="image"
           value={person.artwork.image}
           onChange={handleImageChange}
         />

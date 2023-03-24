@@ -17,14 +17,14 @@ export default function Canvas() {
     // shape.position.x += dx;
     // shape.position.y += dy;
 
-    setShape({
-        ...shape,
+    setShape(prev => ({
+        ...prev,
         position: {
             // ...shape.position,
-            x : dx,
-            y : dy
+            x : prev.position.x += dx,
+            y : prev.position.y += dy
         }
-    })
+    }))
   }
 
   function handleColorChange(e) {
