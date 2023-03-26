@@ -1,13 +1,6 @@
 
-// import { useSpeechRecognition } from "react-speech-kit";
-
 const SpeechRecognition = ({ text, setText }) => {
     
-    // const { listen, listening, stop } = useSpeechRecognition({
-    //     onResult: (result) => {
-    //         setText(result)
-    //     }
-    // })
     return (
         <>
             <div>{text}</div>
