@@ -1,14 +1,4 @@
-import Poem from "./components/1. Describing the UI/1-7 lists-rendering/Poem";
-import RecipeList from "./components/1. Describing the UI/1-7 lists-rendering/RecipeList";
-import BrokenClock from "./components/1. Describing the UI/1-8 keeping-components-pure/BrokenClock"
-import TeaGathering from "./components/1. Describing the UI/1-8 keeping-components-pure/TeaGathering";
-import DeleteList from "./components/2. Adding Interactivity/2-7 arrays-update/DeleteList";
-import ChangesList from "./components/2. Adding Interactivity/2-7 arrays-update/ChangesList";
-import BucketList from "./components/2. Adding Interactivity/2-7 arrays-update/BucketList";
-import Counter from "./components/2. Adding Interactivity/2-5 state-update/Counter";
-import RequestTracker from "./components/2. Adding Interactivity/2-5 state-update/RequestTracker";
-import MovingDot from "./components/2. Adding Interactivity/2-6 objects-update/MovingDot";
-import Canvas from "./components/2. Adding Interactivity/2-6 objects-update/Canvas";
+import Form from "./components/3. Managing State/3-1 input-state/Form"
 
 
 function App() {
@@ -22,8 +12,7 @@ function App() {
   ];
   return (
     <div className="App">
-      {/* <MovingDot /> */}
-      <Canvas />
+      <Form />
     </div>
   );
 }
