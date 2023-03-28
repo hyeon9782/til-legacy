@@ -8,7 +8,7 @@ function Panel({ title, children, isActive, onShow }) {
         <p>{children}</p>
       ) : (
         <button onClick={onShow}>
-          Show
+          Show me the money
         </button>
       )}
     </section>
