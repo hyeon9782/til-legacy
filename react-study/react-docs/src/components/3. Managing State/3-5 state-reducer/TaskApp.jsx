@@ -51,3 +51,9 @@ const initialTasks = [
   {id: 1, text: 'Watch a puppet show', done: false},
   {id: 2, text: 'Lennon Wall pic', done: false},
 ];
+
+// reducer 발동 원리
+// 컴포넌트 입력 발생 => action 을 dispatch함
+// reducer에서 새로운 state가 되어 redux store에 전파됨.
+// 해당 reducer를 구독하고 있는 컴포넌트들이 변경사항을 받아들여
+// 새로 렌더링
