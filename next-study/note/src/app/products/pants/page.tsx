@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Pants() {
+export default function PantsPage() {
   return (
     <div>Pants</div>
   )
