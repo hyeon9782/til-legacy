@@ -12,3 +12,11 @@ export const getDatabase = async () => {
 
   return response;
 };
+
+export const updateDatabase = async () => {
+  return;
+};
+
+export const createDatabase = async () => {
+  return;
+};
