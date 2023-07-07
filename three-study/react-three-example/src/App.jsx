@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Canvas } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
+import { Suspense } from "react";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import Shiba from "./components/Shiba";
+import { OrbitControls } from "@react-three/drei";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const Model = () => {
+  const gltf = useLoader(GLTFLoader, "./shiba/scene.gltf");
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <primitive object={gltf.scene} position={[0, 0, 0]} scale={3} />
     </>
-  )
+  );
+};
+
+function App() {
+  return (
+    <div>
+      <Canvas style={{ width: "100vw", height: "100vh" }}>
+        <Suspense fallback={null}>
+          {/* <Shiba /> */}
+          <Model />
+          <OrbitControls minDistance={5} maxDistance={20} />
+        </Suspense>
+      </Canvas>
+    </div>
+  );
 }
 
-export default App
+export default App;
