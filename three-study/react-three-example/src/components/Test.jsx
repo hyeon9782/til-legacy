@@ -1,3 +1,4 @@
+import { OrbitControls } from "@react-three/drei";
 import { Canvas, useLoader } from "@react-three/fiber";
 import React from "react";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -20,17 +21,18 @@ const Test = () => {
     <Canvas style={{ width: "100vw", height: "100vh" }}>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
+      <OrbitControls minDistance={5} maxDistance={20} />
       <Model
         url="./shiba/scene.gltf"
-        position={[0, 0, 0]}
+        position={[3, 0, 0]}
         rotation={[0, Math.PI / 2, 0]}
         scale={1}
       />
       <Model
         url="./high_detailed_dog/scene.gltf"
-        position={[3, 0, 0]}
+        position={[0, 0, 0]}
         rotation={[0, -Math.PI / 2, 0]}
-        scale={10}
+        scale={30}
       />
     </Canvas>
   );

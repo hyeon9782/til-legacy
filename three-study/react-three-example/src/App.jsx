@@ -7,6 +7,9 @@ import { USDZLoader } from "three/examples/jsm/loaders/USDZLoader";
 import Shiba from "./components/Shiba";
 import { OrbitControls } from "@react-three/drei";
 import Test from "./components/Test";
+import Room from "./components/Room";
+import Box from "./components/Box";
+import FirstScene from "./components/FirstScene";
 
 const Model = () => {
   const gltf = useLoader(GLTFLoader, "./shiba/scene.gltf");
@@ -28,7 +31,12 @@ function App() {
           <OrbitControls minDistance={5} maxDistance={20} />
         </Suspense>
       </Canvas> */}
-      <Test />
+      {/* <Test /> */}
+      {/* <Canvas>
+        <Room />
+      </Canvas> */}
+      {/* <Box /> */}
+      <FirstScene />
     </div>
   );
 }
